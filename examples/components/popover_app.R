@@ -31,7 +31,8 @@ make_button <- function(placement) {
     dbcButton(
         sprintf("Popover on %s", placement),
         id = sprintf("popover-%s-target", placement),
-        className = "mx-2"
+        className = "mx-2",
+        n_clicks = 0
     )
   )
 }
@@ -171,4 +172,4 @@ app$layout(
   className = "p-5")
 )
 
-app$run_server(showcase = TRUE)
+app$run_server(debug = TRUE)

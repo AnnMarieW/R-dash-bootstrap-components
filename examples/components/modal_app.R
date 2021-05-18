@@ -4,7 +4,7 @@ library(dashBootstrapComponents)
 library(dashHtmlComponents)
 library(dashCoreComponents)
 
-LOREM <- toString(read.delim("modal/lorem.txt", stringsAsFactor = FALSE))
+LOREM <- toString(read.delim("examples/components/lorem.txt", stringsAsFactor = FALSE))
 
 app <- Dash$new(external_stylesheets = dbcThemes$BOOTSTRAP)
 

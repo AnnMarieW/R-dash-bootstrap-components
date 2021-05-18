@@ -1,4 +1,3 @@
-# TODO console error in Callback error updating input-group-dropdown-input.value
 
 library(dash)
 library(dashBootstrapComponents)
@@ -200,4 +199,4 @@ app$layout(
   className = "p-5")
 )
 
-app$run_server(showcase = TRUE)
+app$run_server(debug = TRUE)

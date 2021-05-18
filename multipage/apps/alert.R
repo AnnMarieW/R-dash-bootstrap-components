@@ -1,27 +1,15 @@
-  
-  This repo is for the development of R examples to add to the [dash-bootstrap-components documentation.](https://dash-bootstrap-components.opensource.faculty.ai/docs/components/alert/)
-  
-
-the [/docs/components](https://github.com/AnnMarieW/R-dash-bootstrap-components/tree/master/docs/components)
-directory has a folder for each component in the dash-bootstrap-components documentation.  These folders will
-contain a separate file for each code snippet that will show in a tabbed container in the docs.  
-These snippets are not complete apps.  
-
-The  [/examples/components](https://github.com/AnnMarieW/R-dash-bootstrap-components/tree/master/examples/components) directory has complete working apps that can be run to show all the 
-the examples for each component in the dbc documentation.   For example, you can see all the 
-`alert` examples by running  `/examples/components/alert_app.R`
-
-![image](https://user-images.githubusercontent.com/72614349/118715385-69284d80-b7d8-11eb-892c-ca9c6f623332.png)
-
-
-```R
 
 library(dash)
 library(dashBootstrapComponents)
 library(dashHtmlComponents)
 library(dashCoreComponents)
+#
+ #source("multipage/app.R")
 
-app <- Dash$new(external_stylesheets = dbcThemes$BOOTSTRAP)
+#
+# app <- Dash$new(suppress_callback_exceptions = TRUE,
+#               #  external_stylesheets = list('https://codepen.io/chriddyp/pen/bWLwgP.css'))
+#                 external_stylesheets = dbcThemes$BOOTSTRAP)
 
 
 alerts_simple <- htmlDiv(
@@ -113,7 +101,7 @@ alerts_auto_dismiss <- htmlDiv(
 
 
 
-app$layout(
+alert_layout <- (
   dbcContainer(
     list(
       htmlH1("Dash Bootstrap Components Documentation for R"),
@@ -177,12 +165,3 @@ app$callback(
   }
 )
 
-
-app$run_server(debug = TRUE)
-
-
-
-
-
-
-```

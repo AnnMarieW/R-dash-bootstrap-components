@@ -39,7 +39,7 @@ navbar <- dbcNavbar(
       ),
       href = "https://plot.ly"
     ),
-    dbcNavbarToggler(id = "navbar-toggler"),
+    dbcNavbarToggler(id = "navbar-toggler", n_clicks = 0),
     dbcCollapse(
       search_bar, id = "navbar-collapse", is_open = FALSE, navbar = TRUE
     )
@@ -102,4 +102,4 @@ app$layout(
   className = "p-5")
 )
 
-app$run_server(showcase = TRUE)
+app$run_server(debug = TRUE)
